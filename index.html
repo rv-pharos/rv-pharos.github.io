@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+        var current = 0;
+        
+        var backgrounds = [
+            'wes-pw.gif',
+            'wes-pr.gif',
+            'wes-dwi.gif',
+            'wes-dog.gif'
+        ];
+        
+        function nextBackground() {
+            return backgrounds[current = ++current % backgrounds.length]
+        }
+        
+        setInterval(function() {
+            document.getElementById('WES').src = nextBackground();
+        }, 10000);
+        </script>
+    </head>
+    <body style="background:#000; text-align:center;">
+        <img id="WES" src="wes-pw.gif" height="100%">
+    </body>
+</html>
